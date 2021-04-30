@@ -71,12 +71,19 @@ h1, h2, h3, h4, h5, h6 {
 
 body, html {
   font-family: "Open Sans", sans-serif;
-  overflow: hidden;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header {
   height: 100px;
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 0;
   z-index: 5;
 }
 
@@ -218,6 +225,10 @@ body, html {
   }
 }
 
+.menu {
+  width: 100%;
+}
+
 .menu__list {
   display: flex;
 }
@@ -318,11 +329,9 @@ body, html {
 }
 
 .main {
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
   background: url("../img/header-bg.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -448,11 +457,6 @@ body, html {
 }
 
 .hungry__deco {
-  text-align: center;
-  background-color: #E8C300;
-  width: 60px;
-  height: 5px;
-  border-radius: 50px;
   margin-bottom: 30px;
 }
 
@@ -590,4 +594,106 @@ body, html {
 
 .arrow:hover .arrow__inner {
   background-color: #b3b3b3;
+}
+
+.about {
+  background-color: #fff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 996px) {
+  .about {
+    padding: 50px 0;
+  }
+}
+
+.about__box {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 996px) {
+  .about__box {
+    justify-content: center;
+  }
+}
+
+.about__body {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  margin-bottom: 20px;
+}
+
+.about__deco {
+  margin-bottom: 20px;
+}
+
+.about__uptext {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.about__pics {
+  flex: 0 0 50%;
+  width: 600px;
+  height: 475px;
+  position: relative;
+}
+
+@media (max-width: 996px) {
+  .about__pics {
+    display: none;
+  }
+}
+
+.about__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 475px;
+  height: 475px;
+}
+
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__ysquare {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about__ysquare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deco {
+  text-align: center;
+  background-color: #E8C300;
+  width: 60px;
+  height: 5px;
+  border-radius: 50px;
 }

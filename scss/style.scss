@@ -5,13 +5,20 @@
 
 body, html {
 	font-family: $font-primary;
-	overflow: hidden;
 }
 
 
+.container {
+	max-width: 1250px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
 .header {
 	height: 100px;
-	position: relative;
+	width: 100%;
+	position: absolute;
+	top: 0;
 	z-index: 5;
 
 	// .header__container
@@ -159,6 +166,7 @@ body, html {
 
 .menu {
 
+	width: 100%;
 	// .menu__list
 
 	&__list {
@@ -259,11 +267,9 @@ body, html {
 
 .main {
 
+	overflow-x: hidden;
 	width: 100%;
 	height: 100vh;
-	position: fixed;
-	top: 0;
-	right: 0;
 	background: url('../img/header-bg.png') center / cover no-repeat;
 
 	display: flex;
@@ -384,11 +390,6 @@ body, html {
 	// .hungry__deco
 
 	&__deco {
-		text-align: center;
-		background-color: $color-primary;
-		width: 60px;
-		height: 5px;
-		border-radius: 50px;
 		margin-bottom: 30px;
 		@media (max-width: 560px) {
 			margin-bottom: 20px;
@@ -533,4 +534,120 @@ body, html {
 		}
 	}
 }
+
+.about {
+
+	background-color: #fff;
+	padding: 100px 0;
+	overflow: hidden;
+
+	@media (max-width: 996px) {
+		padding: 50px 0;
+	}
+
+	// .about__box
+
+	&__box {
+		display: flex;
+		align-items: center;
+		
+		@media (max-width: 996px) {
+			justify-content: center;
+		}
+	}
+
+	// .about__body
+
+	&__body {
+		flex: 0 0 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .about__title
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	// .about__deco
+
+	&__deco {
+		margin-bottom: 20px;
+	}
+
+	// .about__uptext
+
+	&__uptext {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	// .about__text
+
+	&__text {
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+	}
+
+	// .about__pics
+
+	&__pics {
+		flex: 0 0 50%;
+		width: 600px;
+		height: 475px;
+		position: relative;
+
+		@media (max-width: 996px) {
+			display: none;
+		}
+	}
+
+	// .about__img
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 475px;
+		height: 475px;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .about__ysquare
+
+	&__ysquare {
+		width: 250px;
+		height: 250px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.deco {
+	text-align: center;
+	background-color: $color-primary;
+	width: 60px;
+	height: 5px;
+	border-radius: 50px;
+}
+
 
