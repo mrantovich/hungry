@@ -1,1 +1,15 @@
+@font-face {
+    font-family: 'Banny';
+    src: url('../fonts/Banny-BoldRound.eot');
+    src: url('../fonts/Banny-BoldRound.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Banny-BoldRound.woff2') format('woff2'),
+        url('../fonts/Banny-BoldRound.woff') format('woff'),
+        url('../fonts/Banny-BoldRound.ttf') format('truetype'),
+        url('../fonts/Banny-BoldRound.svg#Banny-BoldRound') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 $font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Banny';
