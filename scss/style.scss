@@ -933,6 +933,10 @@ a {
 	display: flex;
 	flex-direction: column;
 
+	@media (max-width: 978px) {
+		width: 100%;
+	}
+
 	&__columns-box {
 		display: flex;
 		justify-content: space-between;
@@ -1011,6 +1015,12 @@ a {
 		@media (max-width: 768px) {
 			margin-bottom: 20px;
 		}
+	}
+
+	&__column-textarea::placeholder{
+		font-size: 14px;
+		padding-top: 22px;
+		color: rgba($dark-grey, 0.5);
 	}
 
 	&__column-select {
@@ -1312,6 +1322,7 @@ a {
 
 	&__tabs {
 		width: 750px;
+		margin-bottom: 20px;
 		@media (max-width: 768px) {
 			width: 300px;
 		}
@@ -1323,7 +1334,11 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 120px;
+	height: 50px;
+
+	@media (max-width: 768px) {
+		height: 40px;
+	}
 
 	// .tabs__item
 
@@ -1348,6 +1363,10 @@ a {
 			background-color: rgba($dark-grey, 0.2);
 			position: absolute;
 			right: 0;
+
+			@media (max-width: 768px) {
+				height: 40px;
+			}
 		}
 
 		&:last-child {
@@ -1357,8 +1376,19 @@ a {
 		}
 
 		&:hover {
-			color: $light-grey;
+			color: #E5E5E5;
 			background-color: $dark-grey;
+			@media (max-width: 768px) {
+				color: $dark-grey;
+				background-color: transparent;
+			}
+		}
+
+		&:active {
+			@media (max-width: 768px) {
+				color: #E5E5E5;
+				background-color: $dark-grey;
+			}
 		}
 	}
 
