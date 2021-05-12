@@ -61,9 +61,11 @@ a {
 			writing-mode: vertical-lr;
 			font-size: 12px;
 			font-weight: 700;
+			transform: rotate(180deg);
 
 			@media (max-width: 987px) {
 				writing-mode: horizontal-tb;
+				transform: rotate(0);
 				order: 2;
 				margin-bottom: 20px;
 			}
