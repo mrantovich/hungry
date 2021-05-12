@@ -994,6 +994,7 @@ a {
 }
 
 .table__column-general::placeholder {
+  font-size: 12px;
   color: rgba(51, 51, 51, 0.5);
 }
 
@@ -1004,7 +1005,7 @@ a {
 }
 
 .table__column-textarea::placeholder {
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 22px;
   color: rgba(51, 51, 51, 0.5);
 }
@@ -1023,6 +1024,11 @@ a {
   height: 6px;
   margin-top: -5px;
   z-index: 2;
+}
+
+.table__column-select::placeholder {
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.5);
 }
 
 .table__column-people-num {
@@ -1532,8 +1538,30 @@ a {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .glr__box {
+    flex-direction: column;
+  }
+}
+
 .glr__item {
   flex: 0 0 25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.glr__item::after {
+  content: '';
+  background-color: #E5E5E5;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 15;
 }
 
 .glr__item img {
@@ -1541,6 +1569,16 @@ a {
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  z-index: 4;
+}
+
+.glr__item:hover img {
+  transform: scale(1.2);
+}
+
+.glr__item:hover::after {
+  opacity: 0.15;
+  visibility: visible;
 }
 
 .contact {
